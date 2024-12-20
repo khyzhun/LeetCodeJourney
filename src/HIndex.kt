@@ -1,6 +1,6 @@
 fun hIndex(citations: IntArray): Int {
     val sorted = citations.sorted()
-    var result = -1
+    var result = 0
     for (i in sorted.indices) {
         if (sorted[i] >= sorted.size - i) {
             result = sorted.size - i
