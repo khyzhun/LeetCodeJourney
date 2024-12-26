@@ -1,3 +1,5 @@
+package arrays
+
 // O(n^2)
 fun canCompleteCircuit1(gas: IntArray, cost: IntArray): Int {
     val n = gas.size

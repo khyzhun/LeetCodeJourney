@@ -1,3 +1,5 @@
+package arrays
+
 fun hIndex(citations: IntArray): Int {
     val sorted = citations.sorted()
     var result = 0

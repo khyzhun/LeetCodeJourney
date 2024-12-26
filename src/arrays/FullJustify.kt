@@ -1,4 +1,4 @@
-
+package arrays
 
 fun fullJustify(words: Array<String>, maxWidth: Int): List<String> {
     val result = mutableListOf<String>()

@@ -1,3 +1,5 @@
+package arrays
+
 import kotlin.math.max
 
 fun maxProfit(prices: IntArray): Int {

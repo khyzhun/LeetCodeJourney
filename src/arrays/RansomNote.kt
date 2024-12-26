@@ -1,3 +1,5 @@
+package arrays
+
 // map
 fun canConstruct1(ransomNote: String, magazine: String): Boolean {
     val m1: MutableMap<Char, Int> = mutableMapOf()
