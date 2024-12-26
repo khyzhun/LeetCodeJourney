@@ -21,7 +21,26 @@ fun canCompleteCircuit1(gas: IntArray, cost: IntArray): Int {
     return answer
 }
 
+// O(n)
+fun canCompleteCircuit2(gas: IntArray, cost: IntArray): Int {
+    var total = 0
+    var tank = 0
+    var start = 0
+    for (i in gas.indices) {
+        val diff = gas[i] - cost[i]
+        total += diff
+        tank += diff
+        if (tank < 0) {
+            start = i + 1
+            tank = 0
+        }
+    }
+
+    return if (total >= 0) start else -1
+}
+
+
 fun main() {
-    val result = canCompleteCircuit1(gas = intArrayOf(1,2,3,4,5), cost = intArrayOf(3,4,5,1,2))
+    val result = canCompleteCircuit2(gas = intArrayOf(1,2,3,4,5), cost = intArrayOf(3,4,5,1,2))
     println(result)
 }
